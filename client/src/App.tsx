@@ -83,7 +83,8 @@ const App: React.FC = () => {
 
   useEffect(() => {
     // Connect to the Socket.IO server.
-    socketRef.current = io('http://localhost:4000');
+    socketRef.current = io('https://strangerbackend-i8i1.onrender.com');
+    //http://localhost:4000
     // Listen for updates about players’ progress.
     socketRef.current.on('playersUpdate', (data: PlayerData[]) => {
       setPlayersData(data);
